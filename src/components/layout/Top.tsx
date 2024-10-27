@@ -1,12 +1,16 @@
 'use client';
 
-import LogoutButton from "../common/LogoutButton";
+import LogoutButton from "../common/ButtonLogin/Buttons/LogoutButton";
+import LoginoutButton from "../common/ButtonLogin/LoginoutButton";
 
 const Top = () => {
     return (
-       <div className="top sticky w-full">
-            <div>
-                <LogoutButton />
+       <div className="top-0 sticky w-full h-[40px] bg-[rgb(245,245,247)] border-[1px] ">
+            <div className="w-full h-full flex justify-between items-center">
+                <div>사이트명</div>
+                <div className="">
+                    <LoginoutButton />
+                </div>
             </div>
        </div> 
     );

@@ -23,10 +23,8 @@ export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html lang="en">
       <body>
-        <div>
-          <Top />
-          {children}
-        </div>
+        <Top />
+        {children}
       </body>
     </html>
   );

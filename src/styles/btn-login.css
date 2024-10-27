@@ -1,0 +1,11 @@
+.btn-login {
+    @apply 
+        border-[1px] rounded-[10px] border-black;
+}
+
+.btn-login:hover {
+    @apply
+        border-white bg-[rgb(109,72,255)];
+    @apply
+        ease-in-out;
+}
