@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-full w-full">
-      <div className="h-[3600px]"></div>
+    <div className="h-full w-full overflow-scroll">
+      <div className="h-[3600px] overflow-scroll"></div>
     </div>
   );
 }

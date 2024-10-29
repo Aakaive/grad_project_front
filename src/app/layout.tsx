@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+// src/app/layout.tsx
+import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Top from "@/components/layout/Top";
+import { AuthProvider } from '@/context/AuthContext'; // AuthProvider 임포트
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,9 +24,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: React.PropsWithChildren<{}>) {
   return (
     <html lang="en">
-      <body>
-        <Top />
-        {children}
+      <body className="w-full h-[100vh]">
+        <div className="w-full h-full">
+          <AuthProvider> {/* AuthProvider로 children을 감쌉니다. */}
+            <Top />
+            {children}
+          </AuthProvider>
+        </div>
       </body>
     </html>
   );
